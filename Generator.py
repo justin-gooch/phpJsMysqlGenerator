@@ -2,27 +2,27 @@ tableColumns = input('please enter table columns separated by ":" :');
 columnArray = tableColumns.split(":");
 
 print "=====================php==================="
-print "$returnArray = array();"
+print "\t$returnArray = array();"
 for column in columnArray:
-	print "$" + column + "Array = array();";
+	print "\t$" + column + "Array = array();";
 
-print "$sql = 'insert sql statement here'; "
-print "foreach($db->query($sql) as $row)";
-print "{"
+print "\t$sql = 'insert sql statement here'; "
+print "\tforeach($db->query($sql) as $row)";
+print "\t{"
 for column in columnArray:
-	print "array_push($"+column+"Array, $row['"+column+"']);"
-print "}";
+	print "\t\tarray_push($"+column+"Array, $row['"+column+"']);"
+print "\t}";
 
 for column in columnArray:
-	print "$returnArray['"+column+"'] = $"+column+"Array;"
-print "return $returnArray";
+	print "\t$returnArray['"+column+"'] = $"+column+"Array;"
+print "\treturn $returnArray";
 print "====================js=================="
 
-print "$.post('dbCalls.php', {requestType: 'fetchRequestTyle', +searchVariable: 'searchVariable'})";
-print "	.done(function(data))"
-print "	{"
-print "arrays=jQuery.parseJson(data);"
+print "\t$.post('dbCalls.php', {requestType: 'fetchRequestTyle', +searchVariable: 'searchVariable'})";
+print "	\t\t.done(function(data))"
+print "	\t\t{"
+print "\t\t\tarrays=jQuery.parseJson(data);"
 for column in columnArray:
-	print column+" =arrays."+column;
-print " });"
-print"});"
+	print "\t\t\t" +column+" =arrays."+column;
+print " \t\t});"
+ 
