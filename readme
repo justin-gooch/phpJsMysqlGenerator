@@ -1,0 +1,2 @@
+what this thing is:
+in php you basically need getters and setters; this requires a ton of typing that is time consuming as all hell; this program has you insert values separated by : which output the fetch items for it. my plan is to make an automated php thing for it as to save time debugging
